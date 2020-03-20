@@ -1,0 +1,166 @@
+footer {
+    background-color: aliceblue;
+    color: green;
+    font-family: sans-serif;
+    font-size: 30px;
+    width: 50%;
+}
+
+html {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+body {
+    text-align: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu li a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #ccc;
+}
+
+.menu li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table.flights {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table.delayed tr, table.delayed td, table.delayed th {
+    border: thin solid black;
+    padding: 1px 1px;
+}
+
+table.active tr, table.active td, table.active th {
+    border: thin solid black;
+    padding: 5px 15px;
+}
+
+table.active tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.container {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: [start] 200px [line2] auto [line3] auto [line4] auto [line5] auto [end];
+}
+
+.grid-item {
+    position: relative;
+    width: 100%;
+}
+
+.grid-item:nth-child(1) {
+    background-color: #eee;
+}
+
+.grid-item:nth-child(2) {
+    grid-column-start: line2;
+    grid-column-end: line5;
+}
+
+.delay-canceled {
+    background-color: red;
+}
+
+.delay-small {
+    background-color: yellow;
+}
+
+.delay-big {
+    background-color: orange;
+}
+
+#third {
+    background-color: darkgreen;
+    position: relative;
+    top: 100px;
+    left: 25%;
+    width: 200px;
+    z-index: 1;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 75%;
+    height: 75%;
+    background-color: white;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    opacity: 0.95;
+}
+
+.popup-text {
+    font-size: 150px;
+}
+
+.btn-cancel {
+    background-color: red;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    width: 20%;
+}
+
+.form {
+    position: absolute;
+    bottom: 0;
+}
+
+.desc {
+    font-size: larger;
+    font-family: sans-serif;
+}
+
+.desc-img {
+    display: flex;
+}
+
+.desc-plane {
+    position: relative;
+    text-align: left;
+    font-size: 25px;
+}
+
+.plane {
+    margin-left: 5%;
+    width: 60%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        display: grid;
+        grid-column-gap: 15px;
+        grid-template-columns: [line2] auto [line3] auto [line4] auto [line5] auto [col-end];
+        grid-template-rows: [row-start] 50px [row2] auto [row-end];
+    }
+
+    .menu li {
+        float: left;
+    }
+
+    .menu li li {
+        float: left;
+    }
+}

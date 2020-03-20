@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Loty</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+<div class="popup" id="reservation-success">
+    <p class="popup-text">Rezerwacja udana!</p>
+    <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+</div>
+
+<div class="container">
+    <div class="grid-item">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="description.html">Link 1</a></li>
+                <li><a href="description.html">Link 2</a></li>
+                <li><a href="description.html">Link 3</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="grid-item">
+        <h1>Lista lotów</h1>
+
+        <img src="images/stare-logo-lufthansa.png" alt="logo">
+
+        <p id="third">Ale super lot!</p>
+
+        <table class="flights active">
+            <tr>
+                <th>nr lotu</th>
+                <th>skąd</th>
+                <th>dokąd</th>
+                <th>data</th>
+                <th>godzina</th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="description.html">1</a>
+                </td>
+                <td>a</td>
+                <td>b</td>
+                <td>01.01</td>
+                <td>12:00</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="description.html">2904</a>
+                </td>
+                <td>Frankfurt nad Menem</td>
+                <td>Warszawa</td>
+                <td>14.09.1993</td>
+                <td>15:43</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="description.html">3</a>
+                </td>
+                <td>a</td>
+                <td>b</td>
+                <td>01.01</td>
+                <td>12:00</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="description.html">4</a>
+                </td>
+                <td>a</td>
+                <td>b</td>
+                <td>01.01</td>
+                <td>12:00</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="description.html">5</a>
+                </td>
+                <td>a</td>
+                <td>b</td>
+                <td>01.01</td>
+                <td>12:00</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="description.html">6</a>
+                </td>
+                <td>a</td>
+                <td>b</td>
+                <td>01.01</td>
+                <td>12:00</td>
+            </tr>
+        </table>
+
+        <footer>
+            <p>autor: Krystian Sztenderski</p>
+        </footer>
+    </div>
+
+    <div class="grid-item">
+        <table class="flights delayed">
+            <tr>
+                <th>nr lotu</th>
+                <th>skąd</th>
+                <th>dokąd</th>
+                <th>data</th>
+                <th>godzina</th>
+                <th>opóźnienie</th>
+            </tr>
+            <tr class="delay-canceled">
+                <td>1</td>
+                <td>a</td>
+                <td>b</td>
+                <td>01.01</td>
+                <td>12:00</td>
+                <td>odwołany</td>
+            </tr>
+            <tr class="delay-small">
+                <td>2</td>
+                <td>k</td>
+                <td>l</td>
+                <td>01.02</td>
+                <td>12:00</td>
+                <td>0:20</td>
+            </tr>
+            <tr class="delay-big">
+                <td>3</td>
+                <td>x</td>
+                <td>y</td>
+                <td>01.03</td>
+                <td>12:00</td>
+                <td>5:30</td>
+            </tr>
+        </table>
+
+        <form class="form">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="family-name">Nazwisko:</label>
+            <input type="text" id="family-name" name="family-name"><br><br>
+
+            <label for="date">Data:</label>
+            <input type="text" id="date" name="date"><br><br>
+
+            <input type="reset" value="Reset">
+            <button type="button" onclick="openPopup()">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function openPopup() {
+        document.getElementById("reservation-success").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("reservation-success").style.display = "none";
+    }
+</script>
+</body>
+</html>
