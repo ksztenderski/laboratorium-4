@@ -50,6 +50,10 @@ table.delayed tr, table.delayed td, table.delayed th {
     padding: 1px 1px;
 }
 
+table.delayed tr {
+    width: 100%;
+}
+
 table.active tr, table.active td, table.active th {
     border: thin solid black;
     padding: 5px 15px;
@@ -62,7 +66,7 @@ table.active tr:nth-child(even) {
 .container {
     display: grid;
     grid-column-gap: 15px;
-    grid-template-columns: [start] 200px [line2] auto [line3] auto [line4] auto [line5] auto [end];
+    grid-template-columns: [start] 200px [line2] 3fr  [line3] 1fr [end];
 }
 
 .grid-item {
@@ -76,7 +80,7 @@ table.active tr:nth-child(even) {
 
 .grid-item:nth-child(2) {
     grid-column-start: line2;
-    grid-column-end: line5;
+    grid-column-end: line3;
 }
 
 .delay-canceled {
@@ -104,7 +108,7 @@ table.active tr:nth-child(even) {
     display: none;
     position: fixed;
     width: 75%;
-    height: 75%;
+    height: 85%;
     background-color: white;
     border: 3px solid #f1f1f1;
     z-index: 9;
