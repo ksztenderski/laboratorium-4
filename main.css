@@ -152,6 +152,23 @@ table.active tr:nth-child(even) {
     width: 60%;
 }
 
+li:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.popup-seat {
+    position: absolute;
+    display: none;
+    width: 150px;
+    background-color: #555;
+    color: #fff;
+    padding: 5px;
+}
+
+.passenger:hover .popup-seat{
+    display: block;
+}
+
 @media only screen and (max-width: 1000px) {
     .container {
         display: grid;
