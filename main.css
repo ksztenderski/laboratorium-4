@@ -66,7 +66,7 @@ table.active tr:nth-child(even) {
 .container {
     display: grid;
     grid-column-gap: 15px;
-    grid-template-columns: [start] 200px [line2] 3fr  [line3] 1fr [end];
+    grid-template-columns: [start] 200px [line2] 3fr [line3] 1fr [end];
 }
 
 .grid-item {
@@ -156,7 +156,7 @@ table.active tr:nth-child(even) {
     .container {
         display: grid;
         grid-column-gap: 15px;
-        grid-template-columns: [line2] auto [line3] auto [line4] auto [line5] auto [col-end];
+        grid-template-columns: [line2] 3fr [line3] 1fr [end];
         grid-template-rows: [row-start] 50px [row2] auto [row-end];
     }
 
